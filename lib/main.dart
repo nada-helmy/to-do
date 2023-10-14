@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/styles/Theme.dart';
 
 import 'homeScreen.dart';
 
@@ -14,7 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Todo Demo',
-      home: Home(),
+      theme: MyTheme.light,
+      initialRoute: Home.routeName,
+      routes: {
+        Home.routeName:(context) => Home(),
+      },
     );
   }
 }
